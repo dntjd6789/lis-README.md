@@ -1,2 +1,2 @@
-# lis-README.md
-lis README.md
+# 20223147 컴퓨터공학과 박우성 README 과제2
+
