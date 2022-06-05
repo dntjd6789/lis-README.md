@@ -62,11 +62,42 @@ top 실행 후 명령어
 |b | Batch 모드로 작동|
 |1 | CPU Core별로 사용량 보여줌|
 
+```
 
+2)PS
+ps 명령어는 현재 실행중인 프로세스 목록과 상태를 보여줍니다.
+ps옵션은 전통적인 유닉스인 System V,VSD,GNU에따라 결과가 다르게 나타나고 표기법에도 차이를 보입니다.
 
+```
 
+$ps [option]  ALX에서의 ps옵션입니다.
 
+![화면 캡처 2022-06-05 163520](https://user-images.githubusercontent.com/106899918/172040493-c45885ed-88bf-47fc-b2a4-2abf0f72bb20.png)
 
+---
+
+![화면 캡처 2022-06-05 163954](https://user-images.githubusercontent.com/106899918/172040653-66bb2e6a-ab95-40de-ba7f-9256cad19589.png)
+
+ps항목
+
+![화면 캡처 2022-06-05 164153](https://user-images.githubusercontent.com/106899918/172040724-adc6a036-6aa1-46b5-9c6c-7ad847e63dc4.png)
+
+---
+
+ps 명령어 사용 
+|항목|의미|
+|---|---|
+|ps ax|시스템에 동작중인 모든 프로세스를 보고 싶을때 위와 같은 명령어를 사용하면 BSD 포맷으로 출력해줍니다.| 
+|ps aux|시스템에 동작중인 모든 프로세스를 소유자 정보와 함꼐 다양한 정보를 출력합니다.|
+|ps aux\grep apache|특정 프로세스에 대해서 보고싶을 경유|
+|ps -ef\more|'ps -ef'는 System V 계열 옵션으로 'ps aux'처럼 시스템에 동작중인 모든 프로세스를 full format으로 (즉 자세히)출력합니다.|
+|ps el\head|긴 포맷으로 출력하고 싶을 경우 -l옵션을 사용해줍시다.보면'ps -ef'에서 보이지 않았던 ,F,S,PRL,NL,ADDR등등 더 많은 정보들이 출력되는 것을 확인할 수 있어요.|
+|ps -fp[PID]|PID를 키워드로 프로세스 정보를 확인하는 방법입니다. -P옵션을 써주시면 돼요.|
+|ps -U root -u root|특정 사용자가 돌리는 프로세스의 정보를 알고 싶을때 real uid와 uid를 의미하는 옵셔능로 셀렉할 수 있습니다.|
+|ps -t pts/18|특정TTY에서 실행되는 프로세스 또한 뽑아서 확인할 수 있습니다.|
+|ps -e -o pid,ppid,uname,pcpu,pmem,comm,tty\head|-o 옵션을 사용하면 원하는 컬럼만 보이도록 포맷을 정할수 있어요.|
+|ps -p 1222 -o comm=|PID가 1222인 프로세스의 이름을 출력|
+|ps -C httpd -o pid=|이름이 httpd인 프로세스들의 pid를 출력|
 
 
 
